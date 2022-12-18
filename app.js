@@ -10,11 +10,6 @@ const port = 8000;
 app.set("view engine", "ejs");
 app.use(expressLayouts);
 
-// application middleware
-app.use((req, res, next) => {
-  console.log("Time:", Date.now());
-  next();
-});
 
 app.get("/index", (req, res) => {
   const mahasiswa = [
